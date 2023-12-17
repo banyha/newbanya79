@@ -15,6 +15,7 @@ ol, ul {
 #intro {
     width: 100%;
     height: 80px;
+    margin-bottom: 50px;
 }
 .logo-nav {
     height: 100px;
@@ -60,28 +61,101 @@ ol, ul {
     font-size: 20px;
     font-weight: bold;
 }
-#main article {
-    width: 100%;
-    height: 1417px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding-bottom: 20px;
-}
+
 #main article a {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100px;
     background-color: white;
+
 }
 #main article.one {
-    background-color:#ffffff;
+    background-color:#c74343;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    margin-top: 100px;
+    position: relative; /* 추가된 부분 */
+    z-index: 1; /* 추가된 부분 */
 }
+#main article.one a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100px; 
+   
+    position: relative; /* 추가된 부분 */
+    z-index: 2; /* 추가된 부분, 1보다 큰 값으로 설정 */
+ 
+
+}
+#main article.one img {
+   
+    max-width: 100%; 
+    max-height: 100%; 
+}
+.main_text0 {
+    margin-top: 100px; /* 조절 가능한 간격 */
+    text-align: center;
+    position: relative;
+}
+
 #main {
     height: auto; 
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+
 }
+.main_text0 h1 {
+    text-align: center; /* 텍스트 가운데 정렬 (선택 사항) */
+}
+
+.main_text0 h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px; /* 밑줄의 두께 */
+    background-color: #808080; /* 밑줄 색상 (선택 사항) */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* 아래쪽 그림자 효과 */
+}
+
+.icons{
+    display: flex;
+    width:1280px;
+    height: 100%;
+    /*background: orange; */
+    margin:auto;
+}
+
+  .icons > li {
+    flex: 1;
+    background: white;
+    margin-top:49px;
+    height:400px;
+    text-align: center;
+  }
+  .icons > li > .icon_img{
+    margin-top:18px;
+  }
+  
+  .icons > li:not(:last-child){
+    margin-right: 20px;
+  }
+  
+  .icons .contents2 {
+    width:280px;
+    margin:auto;
+    letter-spacing: -1px;
+  }
 footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 120px;
     background-color: black;
